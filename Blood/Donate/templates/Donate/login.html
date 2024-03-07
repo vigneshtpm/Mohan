@@ -103,6 +103,7 @@
             <div class="form-title">Login</div>
             <hr><br><br>
             <form action="" method="POST">
+              {% csrf_token %}
               <div class="form-section">
                 <div class="form-field">
                   <label for="email">Email:</label>
@@ -112,13 +113,10 @@
                   <label for="password">Password:</label>
                   <input type="password" id="password" name="password" required>
                 </div>
-                <div class="form-field">
-                <label for="remember_me">Remember Me:</label>
-                <input type="checkbox" id="remember_me" name="remember_me" value="1">
-                </div>
               </div><br>
-              <button type="submit" class="btn">Login</button>
+             <button type="submit" class="btn">Search</button>
             </form><br><br>
+            <a href="{% url 'Information' %}">hi</a>
             <div class="form-title">Not Registered? <u><a href="{% url 'register' %}" style="display: inline; color: #216aca;" onmouseover="this.style.color='#03d9ff'" onmouseout="this.style.color='#216aca'">Register Here</a></u></div>
           </div>
           <figure class="hero-banner">

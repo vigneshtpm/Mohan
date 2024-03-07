@@ -10,5 +10,8 @@ def register(request):
 def login(request):
     return render(request,"Donate/login.html",{})
 
+def Information(request):
+    return render(request,"Donate/Information.html",{})
+
 
 

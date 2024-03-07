@@ -1,0 +1,141 @@
+{%extends "Donate/layouts/main.html"%}
+{%load static%}
+
+{%block title%}
+   Information
+{%endblock title%}
+
+{%block stylesheet%}
+<style>
+  /* Form Styles */
+  .form-title {
+      color: var(--oxford-blue-1);
+      font-family: var(--ff-poppins);
+      font-size: 3.4rem;
+      font-weight: var(--fw-800);
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .form-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-field {
+    flex: 0 0 48%;
+    margin-bottom: 20px;
+  }
+
+  .form-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-field input,
+  .form-field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .form-field input[type="submit"] {
+    background-color: #216aca;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .form-field input[type="submit"]:hover {
+    background-color: #060952;
+  }
+  #home{
+    background-image: url("{% static 'images/hero-bg.png'%}");
+    }
+</style>
+
+{%endblock stylesheet%}
+  
+
+{%block content%}
+  <main>
+    <article>
+        <section class="section hero" id="home"  aria-label="hero">
+            <!-- Login and Registration Form -->
+            <div class="container">
+              <div class="form-container">
+                <div class="form-title">Information</div>
+                <form action="#" method="POST">
+                    {% csrf_token %}
+                  <!-- Login Information -->
+                  <div class="form-section">
+                   
+                    <div class="form-field">
+                      <label for="full-name">FULL NAME</label>
+                      <h3 style="color: #216aca;">full_name</h3>
+                    </div>
+                    <div class="form-field">
+                      <label for="mobile">MOBILE NUMBER</label>
+                      <h3 style="color: #216aca;">mobile</h3>
+                    </div>
+                    <div class="form-field">
+                      <label for="email">EMAIL</label>
+                      <h3 style="color: #216aca;">email</h3>
+                    </div>
+                  </div>
+                  <!-- Donor Information -->
+                  <div class="form-section">
+                    <div class="form-field">
+                      <label for="blood-group">BLOOD GROUP</label>
+                      <h3 style="color: #216aca;">blood_group</h3>
+                    </div>
+                    <div class="form-field">
+                      <label for="birth-date">BIRTH DATE</label>
+                      <h3 style="color: #216aca;">birth_date</h3>
+                    </div>
+                    <div class="form-field">
+                      <label for="gender">GENDER</label>
+                      <h3 style="color: #216aca;">gender</h3>
+                    </div>
+                    <div class="form-field">
+                      <label for="weight">WEIGHT</label>
+                      <h3 style="color: #216aca;"> weight</h3>
+                    </div>
+                  </div>
+                  <!-- Contact Information -->
+                  <div class="form-section">
+                    <div class="form-field">
+                      <label for="state">STATE</label>
+                     <h3 style="color: #216aca;">state</h3>
+                    </div>
+                    <div class="form-field">
+                      <label for="district">DISTRICT</label>
+                      <h3 style="color: #216aca;">district</h3>
+                    </div>
+                    <div class="form-field">
+                      <label for="zip-code">ZIP CODE</label>
+                     <h3 style="color: #216aca;">zip_code</h3>
+                    </div>
+                    <div class="form-field">
+                      <label for="area">AREA</label>
+                      <h3 style="color: #216aca;">area</h3>
+                    </div>
+                  </div>
+                  <div class="form-field">
+                      <label for="area">Landmarks</label>
+                      <h3 style="color: #216aca;">landmarks</h3>
+                    </div>
+                  
+                </form>
+                
+              </div>
+              <figure class="hero-banner">
+                <img src="{% static 'images/bg.svg' %}" width="587" height="839" alt="hero banner" class="w-100">
+                <center><h2></h2></center>
+              </figure>
+            </div>
+          </section>
+{%endblock content%}
